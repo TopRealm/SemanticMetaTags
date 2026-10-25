@@ -1,5 +1,17 @@
 This file contains the RELEASE-NOTES of the **Semantic Meta Tags** (a.k.a. SMT) extension.
 
+### 5.0.0
+
+Released on June 8, 2026.
+
+* Added support for Semantic MediaWiki 7.0
+* Raised the minimum requirement for
+  * Semantic MediaWiki to version 7.0 and later
+  * MediaWiki to version 1.43 and later
+* Updated to Semantic MediaWiki 7.0's namespaced data-item classes
+* Moved the extension registration and settings defaults into `extension.json` (the `$smtg…` configuration variable names are unchanged)
+* Localization updates from https://translatewiki.net
+
 ### 4.1.1
 
 Released on November 28, 2025.

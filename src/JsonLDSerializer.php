@@ -7,10 +7,12 @@
 
 namespace SMT;
 
-use Html;
-use OutputPage;
-use SpecialPage;
-use Title;
+use Exception;
+use MediaWiki\Html\Html;
+use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Title\Title;
 
 class JsonLDSerializer {
 	/**
@@ -64,7 +66,7 @@ class JsonLDSerializer {
 				] );
 
 			} catch ( Exception $e ) {
-				self::$Logger->error( 'EasyRdf error: ' . $export_url );
+				LoggerFactory::getInstance( 'smt' )->error( 'EasyRdf error: ' . $export_url );
 				return;
 			}
 
